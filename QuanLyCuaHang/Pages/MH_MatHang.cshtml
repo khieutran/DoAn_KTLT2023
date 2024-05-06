@@ -1,0 +1,72 @@
+﻿@page
+@using QuanLyCuaHang.Entities
+@using QuanLyCuaHang.XuLyNghiepVu
+@model QuanLyCuaHang.Pages.MH_MatHangModel
+@{
+    SanPham[] danhsach = XL_SanPham.DocDanhSach();
+    if (Request.Method == "POST")
+    {
+        string TuKhoa = Request.Form["TuKhoa"];
+        danhsach = XL_SanPham.DocDanhSach(TuKhoa);
+    }
+}
+<a href="MH_Them_SanPham">Thêm</a>
+<div class="text-center">
+    <form method="post">
+        <label for="fname">Nhập Tên Sản Phẩm Hoặc Loại Hàng Để Tìm Kiếm:</label><br>
+        <input id="fname" type="text" name="TuKhoa" value=""><br>
+        <input type="submit" value="Tìm Kiếm">
+    </form>
+</div>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<table style="width:100%">
+    <tr>
+        <th>MÃ SẢN PHẨM</th>
+        <th>TÊN SẢN PHẨM</th>
+        <th>HẠN SỬ DỤNG</th>
+        <th>CÔNG TY SẢN XUẤT</th>
+        <th>NGÀY SẢN XUẤT</th>
+        <th>LOẠI HÀNG</th>
+        <th>GIÁ</th>
+        <th>ACTION</th>
+    </tr>
+    @if (danhsach.Length > 0)
+    {
+        @foreach (SanPham sp in danhsach)
+        {
+            <tr>
+                <td>@sp.MaSP</td>
+                <td>@sp.TenSP</td>
+                <td>@sp.HanDung</td>
+                <td>@sp.CongTy_SX</td>
+                <td>@sp.NgaySX</td>
+                <td>@sp.LoaiHang</td>
+                <td>@sp.Gia</td>
+                <td>
+                    <a href="MH_Sua_SanPham?masp=@sp.MaSP">Sửa</a>
+                    <a href="MH_Xoa_SanPham?masp=@sp.MaSP">Xóa</a>
+                </td>
+            </tr>
+        }
+    }
+</table>
+@if (danhsach == null)
+{
+    <div>Khong co ket qua tuong ung</div>
+}

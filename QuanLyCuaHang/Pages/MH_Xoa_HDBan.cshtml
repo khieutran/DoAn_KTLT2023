@@ -1,0 +1,46 @@
+﻿@page
+@using QuanLyCuaHang.Entities
+@using QuanLyCuaHang.XuLyNghiepVu
+@model QuanLyCuaHang.Pages.MH_Xoa_SanPhamModel
+@{
+    string chuoi = string.Empty;
+    string MaHD_Ban = Request.Query["MaHD_Ban"];
+    HoaDonBH? b = null;
+    if (!string.IsNullOrEmpty(MaHD_Ban))
+    {
+        b = XL_HoaDon.DocChiTiet_HDBan(MaHD_Ban);
+        if (b == null)
+        {
+            chuoi = "Hóa đơn không tồn tại";
+        }
+        else
+        {
+            if (Request.Method == "POST")
+            {
+                string kq = XL_HoaDon.XoaHD_Ban(MaHD_Ban);
+                chuoi = kq;
+                if (string.IsNullOrEmpty(chuoi))
+                {
+                    Response.Redirect("MH_HoaDon_BanHang");
+                }
+            }
+        }
+    }
+    else
+    {
+        chuoi = "Không có tham số mã hóa đơn";
+    }
+}
+<div class="text-center">
+    @if (b != null)
+    {
+        <div>Bạn có muốn xóa hóa đơn bán hàng có mã <div>@b.MaHD_BH</div> ngày <div>@b.NgayTaoHD_Ban</div> không? </div>
+        <form method="post">
+            <input type="submit" value="Xóa">
+        </form>
+    }
+    else
+    {
+        <div>@chuoi</div>
+    }
+</div>

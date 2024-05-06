@@ -1,0 +1,28 @@
+﻿@page
+@using QuanLyCuaHang.Entities
+@using QuanLyCuaHang.XuLyNghiepVu
+@model QuanLyCuaHang.Pages.MH_DangKyModel
+@{
+    string chuoi = string.Empty;
+    if (Request.Method == "POST")
+    {
+        User p = new User();
+        p.Fullname = Request.Form["fullname"];
+        p.Email = Request.Form["email"];
+        p.Password = Request.Form["password"];
+        string kq = XL_TaiKhoan.Register(p);
+        chuoi = kq;
+    }
+}
+<div class="text-center">
+    <form method="post">
+        <label for="fname">Fullname:</label><br>
+        <input type="text" name="fullname" value=""><br>
+        <label for="fname">Email:</label><br>
+        <input type="text" name="email" value=""><br>
+        <label for="fname">Password:</label><br>
+        <input type="password" name="password" value=""><br>
+        <input type="submit" value="Register">
+    </form>
+    @chuoi;
+</div>

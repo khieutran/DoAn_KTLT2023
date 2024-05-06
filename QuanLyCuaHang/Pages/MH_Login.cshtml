@@ -1,0 +1,33 @@
+﻿@page
+@using QuanLyCuaHang.Entities
+@using QuanLyCuaHang.XuLyNghiepVu
+@model QuanLyCuaHang.Pages.MH_LoginModel
+@{
+    string chuoi = string.Empty;
+    if (Request.Method == "POST")
+    {
+        string Email = Request.Form["email"];
+        string Password = Request.Form["password"];
+        User? user = XL_TaiKhoan.Login(Email, Password);
+        if (user == null)
+        {
+            chuoi = "Đăng nhập không thành công";
+        }
+        else
+        {
+            HttpContext.Session.SetString("fullname", user.Fullname);
+            HttpContext.Session.SetString("email", user.Email);
+            Response.Redirect("MH_Chinh");
+        }
+    }
+}
+<div class="text-center">
+    <form method="post">
+        <label for="fname">Email:</label><br>
+        <input type="text" name="email" value=""><br>
+        <label for="fname">Password:</label><br>
+        <input type="password" name="password" value=""><br>
+        <input type="submit" value="Login">
+    </form>
+    @chuoi;
+</div>

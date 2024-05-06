@@ -1,0 +1,72 @@
+﻿@page
+@using QuanLyCuaHang.Entities
+@using QuanLyCuaHang.XuLyNghiepVu
+@model QuanLyCuaHang.Pages.MH_Sua_SanPhamModel
+@{
+    string chuoi = string.Empty;
+    string masp = Request.Query["masp"];
+    SanPham? p = null;
+    if (!string.IsNullOrEmpty(masp))
+    {
+        p = XL_SanPham.DocChiTietSanPham(masp);
+        if (p == null)
+        {
+            chuoi = "Sản phẩm không tồn tại";
+        }
+        else
+        {
+            if (Request.Method == "POST")
+            {
+                string ten = Request.Form["ten"];
+                string hansd = Request.Form["HanDung"];
+                string ctysx = Request.Form["CTY_SX"];
+                string ngaysx = Request.Form["NgaySX"];
+                string loai = Request.Form["LoaiHang"];
+                int gia = int.Parse(Request.Form["Gia"]);
+                SanPham sp = p;
+                sp.TenSP = ten;
+                sp.HanDung = hansd;
+                sp.CongTy_SX = ctysx;
+                sp.NgaySX = ngaysx;
+                sp.LoaiHang = loai;
+                sp.Gia = gia;
+                string kq = XL_SanPham.SuaSanPham(sp);
+                chuoi = kq;
+                if (string.IsNullOrEmpty(chuoi))
+                {
+                    Response.Redirect("MH_MatHang");
+                }
+            }
+        }
+    }
+    else
+    {
+        chuoi = "Không có tham số mã sản phẩm cần tìm";
+    }
+}
+<div class="text-center">
+    @if (p != null)
+    {
+        <form method="post">
+            <label for="fname">MÃ SẢN PHẨM:</label><br>
+            <input id="fname" type="text" name="masp" value="@p.MaSP"><br>
+            <label for="fname">TÊN SẢN PHẨM:</label><br>
+            <input type="text" name="ten" value="@p.TenSP"><br>
+            <label for="fname">HẠN SỬ DỤNG:</label><br>
+            <input type="text" name="HanDung" value="@p.HanDung"><br>
+            <label for="fname">CÔNG TY SẢN XUẤT:</label><br>
+            <input type="text" name="CTY_SX" value="@p.CongTy_SX"><br>
+            <label for="fname">NGÀY SẢN XUẤT:</label><br>
+            <input type="text" name="NgaySX" value="@p.NgaySX"><br>
+            <label for="fname">LOẠI HÀNG:</label><br>
+            <input type="text" name="LoaiHang" value="@p.LoaiHang"><br>
+            <label for="fname">GIÁ:</label><br>
+            <input type="text" name="Gia" value="@p.Gia"><br>
+            <input type="submit" value="Luu">
+        </form>
+    }
+    else
+    {
+        <div>@chuoi</div>
+    }
+</div>

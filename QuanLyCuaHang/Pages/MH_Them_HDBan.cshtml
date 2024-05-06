@@ -1,0 +1,42 @@
+﻿@page
+@using QuanLyCuaHang.Entities
+@using QuanLyCuaHang.XuLyNghiepVu
+@model QuanLyCuaHang.Pages.MH_Sua_HDBanModel
+@{
+    string chuoi = string.Empty;
+    if (Request.Method == "POST")
+    {
+        HoaDonBH b = new HoaDonBH();
+        b.MaHD_BH = Request.Form["MaHD"];
+        b.NgayTaoHD_Ban = Request.Form["NgayTaoHD"];
+        b.MatHang = Request.Form["MatHang"];
+        b.LoaiHang = Request.Form["LoaiHang"];
+        b.SL = int.Parse(Request.Form["SL"]);
+        b.Gia = int.Parse(Request.Form["gia"]);
+        string kq = XL_HoaDon.ThemHoaDon_Ban(b);
+        chuoi = kq;
+        if (string.IsNullOrEmpty(chuoi))
+        {
+            Response.Redirect("MH_HoaDon_BanHang");
+        }
+
+    }
+}
+<div class="text-center">
+    <form method="post">
+        <label for="fname">MÃ HÓA ĐƠN:</label><br>
+        <input type="text" name="MaHD" value=""><br>
+        <label for="fname">NGÀY TẠO HD:</label><br>
+        <input type="text" name="NgayTaoHD" value=""><br>
+        <label for="fname">MẶT HÀNG:</label><br>
+        <input type="text" name="MatHang" value=""><br>
+        <label for="fname">LOẠI HÀNG:</label><br>
+        <input type="text" name="LoaiHang" value=""><br>
+        <label for="fname">SỐ LƯỢNG:</label><br>
+        <input type="text" name="SL" value=""><br>
+        <label for="fname">GIÁ:</label><br>
+        <input type="text" name="gia" value=""><br>
+        <input type="submit" value="Thêm">
+    </form>
+    @chuoi;
+</div>

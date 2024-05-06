@@ -1,0 +1,61 @@
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\appsettings.Development.json
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\appsettings.json
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\QuanLyCuaHang.staticwebassets.runtime.json
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\QuanLyCuaHang.exe
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\QuanLyCuaHang.deps.json
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\QuanLyCuaHang.runtimeconfig.json
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\QuanLyCuaHang.dll
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\QuanLyCuaHang.pdb
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.GeneratedMSBuildEditorConfig.editorconfig
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.AssemblyInfoInputs.cache
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.AssemblyInfo.cs
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.csproj.CoreCompileInputs.cache
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.MvcApplicationPartsAssemblyInfo.cache
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.RazorAssemblyInfo.cache
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.RazorAssemblyInfo.cs
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets\msbuild.QuanLyCuaHang.Microsoft.AspNetCore.StaticWebAssets.props
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets\msbuild.build.QuanLyCuaHang.props
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.QuanLyCuaHang.props
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.QuanLyCuaHang.props
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets.pack.json
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets.build.json
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets.development.json
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\scopedcss\bundle\QuanLyCuaHang.styles.css
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\scopedcss\projectbundle\QuanLyCuaHang.bundle.scp.css
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.dll
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\refint\QuanLyCuaHang.dll
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.pdb
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.genruntimeconfig.cache
+H:\Information Technology 2022-2025\KiThuatLapTrinh\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\ref\QuanLyCuaHang.dll
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\appsettings.Development.json
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\appsettings.json
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\QuanLyCuaHang.staticwebassets.runtime.json
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\QuanLyCuaHang.exe
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\QuanLyCuaHang.deps.json
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\QuanLyCuaHang.runtimeconfig.json
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\QuanLyCuaHang.dll
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\bin\Debug\net6.0\QuanLyCuaHang.pdb
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.csproj.AssemblyReference.cache
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.GeneratedMSBuildEditorConfig.editorconfig
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.AssemblyInfoInputs.cache
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.AssemblyInfo.cs
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.csproj.CoreCompileInputs.cache
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.MvcApplicationPartsAssemblyInfo.cache
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.RazorAssemblyInfo.cache
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.RazorAssemblyInfo.cs
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets\msbuild.QuanLyCuaHang.Microsoft.AspNetCore.StaticWebAssets.props
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets\msbuild.build.QuanLyCuaHang.props
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.QuanLyCuaHang.props
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.QuanLyCuaHang.props
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets.pack.json
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets.build.json
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\staticwebassets.development.json
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\scopedcss\bundle\QuanLyCuaHang.styles.css
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\scopedcss\projectbundle\QuanLyCuaHang.bundle.scp.css
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.dll
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\refint\QuanLyCuaHang.dll
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.pdb
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\QuanLyCuaHang.genruntimeconfig.cache
+G:\22880239\DoAn_KTLT2023\QuanLyCuaHang\obj\Debug\net6.0\ref\QuanLyCuaHang.dll

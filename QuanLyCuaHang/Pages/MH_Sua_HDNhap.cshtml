@@ -1,0 +1,68 @@
+﻿@page
+@using QuanLyCuaHang.Entities
+@using QuanLyCuaHang.XuLyNghiepVu
+@model QuanLyCuaHang.Pages.MH_Sua_SanPhamModel
+@{
+    string chuoi = string.Empty;
+    string MaHD_Nhap = Request.Query["MaHD_Nhap"];
+    HoaDonNH? n = null;
+    if (!string.IsNullOrEmpty(MaHD_Nhap))
+    {
+        n = XL_HoaDon.DocChiTiet_HDNhap(MaHD_Nhap);
+        if (n == null)
+        {
+            chuoi = "Hóa đơn bán hàng không tồn tại";
+        }
+        else
+        {
+            if (Request.Method == "POST")
+            {
+                string ngaytaohd = Request.Form["NgayTaoHD"];
+                string mathang = Request.Form["MatHang"];
+                string loai = Request.Form["LoaiHang"];
+                int soluong = int.Parse(Request.Form["SL"]);
+                int gia = int.Parse(Request.Form["Gia"]);
+                HoaDonNH nh = n;
+                nh.NgayTaoHD_Nhap = ngaytaohd;
+                nh.MatHang = mathang;
+                nh.LoaiHang = loai;
+                nh.SL = soluong;
+                nh.Gia = gia;
+                string kq = XL_HoaDon.SuaHD_Nhap(nh);
+                chuoi = kq;
+                if (string.IsNullOrEmpty(chuoi))
+                {
+                    Response.Redirect("MH_HoaDon_BanHang");
+                }
+            }
+        }
+    }
+    else
+    {
+        chuoi = "Không có tham số mã hóa đơn tương ứng";
+    }
+}
+<div class="text-center">
+    @if (n != null)
+    {
+        <form method="post">
+            <label for="fname">MÃ SẢN PHẨM:</label><br>
+            <input id="fname" type="text" name="MaHD_Nhap" value="@n.MaHD_NH"><br>
+            <label for="fname">TÊN SẢN PHẨM:</label><br>
+            <input type="text" name="NgayTaoHD" value="@n.NgayTaoHD_Nhap"><br>
+            <label for="fname">HẠN SỬ DỤNG:</label><br>
+            <input type="text" name="MatHang" value="@n.MatHang"><br>
+            <label for="fname">LOẠI HÀNG:</label><br>
+            <input type="text" name="LoaiHang" value="@n.LoaiHang"><br>
+            <label for="fname">SỐ LƯỢNG:</label><br>
+            <input type="text" name="SL" value="@n.SL"><br>
+            <label for="fname">GIÁ:</label><br>
+            <input type="text" name="Gia" value="@n.Gia"><br>
+            <input type="submit" value="Luu">
+        </form>
+    }
+    else
+    {
+        <div>@chuoi</div>
+    }
+</div>

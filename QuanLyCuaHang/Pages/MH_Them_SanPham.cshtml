@@ -1,0 +1,45 @@
+﻿@page
+@using QuanLyCuaHang.Entities
+@using QuanLyCuaHang.XuLyNghiepVu
+@model QuanLyCuaHang.Pages.MH_Them_SanPhamModel
+@{
+    string chuoi = string.Empty;
+    if (Request.Method == "POST")
+    {
+        SanPham p = new SanPham();
+        p.MaSP = Request.Form["masp"];
+        p.TenSP = Request.Form["ten"];
+        p.HanDung = Request.Form["HanDung"];
+        p.CongTy_SX = Request.Form["CTY_SX"];
+        p.NgaySX = Request.Form["NgaySX"];
+        p.LoaiHang = Request.Form["LoaiHang"];
+        p.Gia = int.Parse(Request.Form["gia"]);
+        string kq = XL_SanPham.ThemSanPham(p);
+        chuoi = kq;
+        if (string.IsNullOrEmpty(chuoi))
+        {
+            Response.Redirect("MH_MatHang");
+        }
+
+    }
+}
+<div class="text-center">
+    <form method="post">
+        <label for="fname">MÃ SẢN PHẨM:</label><br>
+        <input type="text" name="masp" value=""><br>
+        <label for="fname">TÊN SẢN PHẨM:</label><br>
+        <input type="text" name="ten" value=""><br>
+        <label for="fname">HẠN SỬ DỤNG:</label><br>
+        <input type="text" name="HanDung" value=""><br>
+        <label for="fname">CÔNG TY SẢN XUẤT:</label><br>
+        <input type="text" name="CTY_SX" value=""><br>
+        <label for="fname">NGÀY SẢN XUẤT:</label><br>
+        <input type="text" name="NgaySX" value=""><br>
+        <label for="fname">LOẠI HÀNG:</label><br>
+        <input type="text" name="LoaiHang" value=""><br>
+        <label for="fname">GIÁ:</label><br>
+        <input type="text" name="gia" value=""><br>
+        <input type="submit" value="Thêm">
+    </form>
+    @chuoi;
+</div>

@@ -1,0 +1,46 @@
+﻿@page
+@using QuanLyCuaHang.Entities
+@using QuanLyCuaHang.XuLyNghiepVu
+@model QuanLyCuaHang.Pages.MH_Xoa_SanPhamModel
+@{
+    string chuoi = string.Empty;
+    string masp = Request.Query["masp"];
+    SanPham? p = null;
+    if (!string.IsNullOrEmpty(masp))
+    {
+        p = XL_SanPham.DocChiTietSanPham(masp);
+        if (p == null)
+        {
+            chuoi = "sản phẩm không tồn tại";
+        }
+        else
+        {
+            if (Request.Method == "POST")
+            {
+                string kq = XL_SanPham.XoaSanPham(masp);
+                chuoi = kq;
+                if (string.IsNullOrEmpty(chuoi))
+                {
+                    Response.Redirect("MH_MatHang");
+                }
+            }
+        }
+    }
+    else
+    {
+        chuoi = "Không có tham số mã sản phẩm";
+    }
+}
+<div class="text-center">
+    @if (p != null)
+    {
+        <div>Bạn muốn xóa sản phẩm <div>@p.TenSP</div> không? </div>
+        <form method="post">
+            <input type="submit" value="Xoa">
+        </form>
+    }
+    else
+    {
+        <div>@chuoi</div>
+    }
+</div>

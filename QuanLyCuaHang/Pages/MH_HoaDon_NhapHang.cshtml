@@ -1,0 +1,70 @@
+﻿@page
+@using QuanLyCuaHang.Entities
+@using QuanLyCuaHang.XuLyNghiepVu
+@model QuanLyCuaHang.Pages.MH_HoaDon_NhapHangModel
+@{
+    HoaDonNH[] hoadonnhap = XL_HoaDon.DocHoaDon_NH();
+    if (Request.Method == "POST")
+    {
+        string TuKhoa = Request.Form["TuKhoa"];
+        hoadonnhap = XL_HoaDon.DocHoaDon_NH(TuKhoa);
+    }
+}
+<a href="MH_Them_HDNhap">Thêm</a>
+<div class="text-center">
+    <form method="post">
+        <label for="fname">TuKhoa:</label><br>
+        <input id="fname" type="text" name="TuKhoa" value=""><br>
+        <input type="button" value="Tìm Kiếm">
+    </form>
+</div>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<table style="width:100%">
+    <tr>
+        <th>MÃ HÓA ĐƠN</th>
+        <th>NGÀY TẠO HÓA ĐƠN</th>
+        <th>MẶT HÀNG</th>
+        <th>LOẠI HÀNG</th>
+        <th>SỐ LƯỢNG</th>
+        <th>GIÁ TIỀN</th>
+        <th>ACTION</th>
+    </tr>
+    @if (hoadonnhap.Length > 0)
+    {
+        @foreach (HoaDonNH HoaDon_NH in hoadonnhap)
+        {
+            <tr>
+                <td>@HoaDon_NH.MaHD_NH</td>
+                <td>@HoaDon_NH.NgayTaoHD_Nhap</td>
+                <td>@HoaDon_NH.MatHang</td>
+                <td>@HoaDon_NH.LoaiHang</td>
+                <td>@HoaDon_NH.SL</td>
+                <td>@HoaDon_NH.Gia</td>
+                <td>
+                    <a href="MH_Sua_HDNhap?MaHD_Nhap=@HoaDon_NH.MaHD_NH">Sửa</a>
+                    <a href="MH_Xoa_HDNhap?MaHD_Nhap=@HoaDon_NH.MaHD_NH">Xóa</a>
+                </td>
+            </tr>
+        }
+    }
+</table>
+@if (hoadonnhap == null)
+{
+    <div>Khong co ket qua tuong ung</div>
+}
